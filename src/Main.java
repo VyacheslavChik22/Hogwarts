@@ -1,4 +1,5 @@
 public class Main {
+
     public static void main(String[] args) {
         Gryffindor[] gryffindor = {
                 new Gryffindor("Гарри Поттер", 0, 0, 0, 0, 0),
@@ -19,21 +20,33 @@ public class Main {
                 new Ravenclow("Маркус Белби", 0, 0, 0, 0, 0, 0)
         };
 
-        Slytherin[] slytherin ={
-                new Slytherin("Драко Малфой",0,0,0,0,0,0,0),
-                new Slytherin("Грэхэм Монтегю",0,0,0,0,0,0,0),
-                new Slytherin("Грегори Гойл",0,0,0,0,0,0,0),
+        Slytherin[] slytherin = {
+                new Slytherin("Драко Малфой", 0, 0, 0, 0, 0, 0, 0),
+                new Slytherin("Грэхэм Монтегю", 0, 0, 0, 0, 0, 0, 0),
+                new Slytherin("Грегори Гойл", 0, 0, 0, 0, 0, 0, 0),
         };
 
 
-
-
-
         ShowStudents showStudents = new ShowStudents();
+
         showStudents.gryffindorStudents(gryffindor);
+        showStudents.gryffindorStudentsPoints();
+        showStudents.gryffindorStudentsBest();
+
+
         showStudents.hufflupuffStudents(hufflupuff);
+        showStudents.hufflupuffStudentsPoints();
+        showStudents.hufflupuffStudentsBest();
+
         showStudents.ravenclowStudents(ravenclow);
+        showStudents.ravenclowStudentsPoints();
+        showStudents.ravenclowStudentsBest();
+
         showStudents.slytherinStudents(slytherin);
+        showStudents.slytherinStudentsPoints();
+        showStudents.slytherinStudentsBest();
+
+        showStudents.battleStudentsHogwarts();
 
     }
 }

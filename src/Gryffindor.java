@@ -5,7 +5,7 @@ public class Gryffindor extends Hogwarts {
     private int bravery;   // Храбрость
 
 
-    public Gryffindor( String name, int powerMagic, int transgressionDistance, int nobility, int honour, int bravery) {
+    public Gryffindor(String name, int powerMagic, int transgressionDistance, int nobility, int honour, int bravery) {
         super(name, powerMagic, transgressionDistance);
         this.nobility = (int) Math.round(1 + Math.random() * 100);
         this.honour = (int) Math.round(1 + Math.random() * 100);

@@ -7,10 +7,10 @@ public class Ravenclow extends Hogwarts {
 
     public Ravenclow(String name, int powerMagic, int transgressionDistance, int mind, int wisdom, int wit, int creation) {
         super(name, powerMagic, transgressionDistance);
-        Mind =  (int) Math.round(1 + Math.random() * 100);
-        Wisdom =  (int) Math.round(1 + Math.random() * 100);
-        Wit =  (int) Math.round(1 + Math.random() * 100);
-        Creation =  (int) Math.round(1 + Math.random() * 100);
+        Mind = (int) Math.round(1 + Math.random() * 100);
+        Wisdom = (int) Math.round(1 + Math.random() * 100);
+        Wit = (int) Math.round(1 + Math.random() * 100);
+        Creation = (int) Math.round(1 + Math.random() * 100);
     }
 
     public int getMind() {
