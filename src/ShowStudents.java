@@ -5,6 +5,7 @@ public class ShowStudents {
     static String gryffindorStudentName1 = "";
     static String gryffindorStudentName2 = "";
     static String gryffindorStudentName3 = "";
+    static int battlePowerMagicGryffindor1 = 0;
 
     static int hufflupuffStudentPoints1 = 0;
     static int hufflupuffStudentPoints2 = 0;
@@ -12,6 +13,7 @@ public class ShowStudents {
     static String hufflupuffStudentName1 = "";
     static String hufflupuffStudentName2 = "";
     static String hufflupuffStudentName3 = "";
+    static int battlePowerMagicHufflupuff1 = 0;
 
     static int ravenclowStudentPoints1 = 0;
     static int ravenclowStudentPoints2 = 0;
@@ -19,6 +21,7 @@ public class ShowStudents {
     static String ravenclowStudentName1 = "";
     static String ravenclowStudentName2 = "";
     static String ravenclowStudentName3 = "";
+    static int battlePowerMagicRavenclow1 = 0;
 
     static int slytherinStudentPoints1 = 0;
     static int slytherinStudentPoints2 = 0;
@@ -26,6 +29,7 @@ public class ShowStudents {
     static String slytherinStudentName1 = "";
     static String slytherinStudentName2 = "";
     static String slytherinStudentName3 = "";
+    static int battlePowerMagicSlytherin1 = 0;
 
 
     public static void gryffindorStudents(Gryffindor[] gryffindor) {
@@ -38,6 +42,7 @@ public class ShowStudents {
                 gryffindorStudentPoints1 = gryffindorStudent.getPowerMagic() + gryffindorStudent.getTransgressionDistance() + gryffindorStudent.getNobility() +
                         gryffindorStudent.getHonour() + gryffindorStudent.getBravery();
                 gryffindorStudentName1 = gryffindorStudent.getName();
+                battlePowerMagicGryffindor1 = gryffindorStudent.getPowerMagic();
             } else if (a == 2) {
                 gryffindorStudentPoints2 = gryffindorStudent.getPowerMagic() + gryffindorStudent.getTransgressionDistance() + gryffindorStudent.getNobility() +
                         gryffindorStudent.getHonour() + gryffindorStudent.getBravery();
@@ -71,6 +76,7 @@ public class ShowStudents {
                 hufflupuffStudentPoints1 = hufflupuffStudent.getPowerMagic() + hufflupuffStudent.getTransgressionDistance() + hufflupuffStudent.getIndustriousness() +
                         hufflupuffStudent.getLoyalty() + hufflupuffStudent.getHonesty();
                 hufflupuffStudentName1 = hufflupuffStudent.getName();
+                battlePowerMagicHufflupuff1 = hufflupuffStudent.getPowerMagic();
             } else if (a == 2) {
                 hufflupuffStudentPoints2 = hufflupuffStudent.getPowerMagic() + hufflupuffStudent.getTransgressionDistance() + hufflupuffStudent.getIndustriousness() +
                         hufflupuffStudent.getLoyalty() + hufflupuffStudent.getHonesty();
@@ -95,7 +101,7 @@ public class ShowStudents {
         System.out.println("Ученик: " + hufflupuffStudentName3 + " в сумме получает: " + hufflupuffStudentPoints3 + " баллов");
     }
 
-    public void ravenclowStudents(Ravenclow[] ravenclow) {
+    public static void ravenclowStudents(Ravenclow[] ravenclow) {
         System.out.println("\n*** Ravenclow students:");
         for (int i = 0; i < ravenclow.length; i++) {
             int a = 1;
@@ -105,6 +111,7 @@ public class ShowStudents {
                 ravenclowStudentPoints1 = ravenclowStudent.getPowerMagic() + ravenclowStudent.getTransgressionDistance() + ravenclowStudent.getMind() +
                         ravenclowStudent.getWisdom() + ravenclowStudent.getWit() + ravenclowStudent.getCreation();
                 ravenclowStudentName1 = ravenclowStudent.getName();
+                battlePowerMagicRavenclow1 = ravenclowStudent.getPowerMagic();
             } else if (a == 2) {
                 ravenclowStudentPoints2 = ravenclowStudent.getPowerMagic() + ravenclowStudent.getTransgressionDistance() + ravenclowStudent.getMind() +
                         ravenclowStudent.getWisdom() + ravenclowStudent.getWit() + ravenclowStudent.getCreation();
@@ -126,7 +133,7 @@ public class ShowStudents {
         System.out.println("Ученик: " + ravenclowStudentName3 + " в сумме получает: " + ravenclowStudentPoints3 + " баллов");
     }
 
-    public void slytherinStudents(Slytherin[] slytherin) {
+    public static void slytherinStudents(Slytherin[] slytherin) {
         System.out.println("\n*** Slytherin students:");
         for (int i = 0; i < slytherin.length; i++) {
             int a = 1;
@@ -136,6 +143,7 @@ public class ShowStudents {
                 slytherinStudentPoints1 = slytherinStudent.getPowerMagic() + slytherinStudent.getTransgressionDistance() + slytherinStudent.getCunning() +
                         slytherinStudent.getDecisiveness() + slytherinStudent.getAmbitiousness() + slytherinStudent.getResourcefulness() + slytherinStudent.getThirstForPower();
                 slytherinStudentName1 = slytherinStudent.getName();
+                battlePowerMagicSlytherin1 = slytherinStudent.getPowerMagic();
             } else if (a == 2) {
                 slytherinStudentPoints2 = slytherinStudent.getPowerMagic() + slytherinStudent.getTransgressionDistance() + slytherinStudent.getCunning() +
                         slytherinStudent.getDecisiveness() + slytherinStudent.getAmbitiousness() + slytherinStudent.getResourcefulness() + slytherinStudent.getThirstForPower();
@@ -246,8 +254,8 @@ public class ShowStudents {
 
     public void battleStudentsHogwarts() {
         System.out.println("\n*** Лучшим учеником Хогвадца является:");
-        String bigBattleName[] = {gryffindorStudentName1, ravenclowStudentName1, hufflupuffStudentName1, slytherinStudentName1};
-        int bigBattlePoint[] = {gryffindorStudentPoints1, ravenclowStudentPoints1, hufflupuffStudentPoints1, slytherinStudentPoints1};
+        String bigBattleName[] = { gryffindorStudentName1,ravenclowStudentName1, hufflupuffStudentName1, slytherinStudentName1};
+        int bigBattlePointPowerMagic[] = {battlePowerMagicGryffindor1, battlePowerMagicRavenclow1, battlePowerMagicHufflupuff1, battlePowerMagicSlytherin1};
         String faculty[] = {"Гриффиндор", "Когтевран", "Пуффендуй", "Слизерин"};
         int facultyStudentBest = 0;
         int facultyStudentSmaller = 0;
@@ -255,18 +263,19 @@ public class ShowStudents {
         int smallerPoints = 0;
         int nameStudentMaxPoint = 0;
         int nameStudentSmallerPoints = 0;
-        for (int i = 0; i < bigBattlePoint.length; i++) {
-            if (maxPoints < bigBattlePoint[i]) {
-                maxPoints = bigBattlePoint[i];
+        for (int i = 0; i < bigBattlePointPowerMagic.length; i++) {
+            if (maxPoints < bigBattlePointPowerMagic[i]) {
+                maxPoints = bigBattlePointPowerMagic[i];
                 nameStudentMaxPoint = i;
                 facultyStudentBest = i;
             } else {
-                smallerPoints = bigBattlePoint[i];
+                smallerPoints = bigBattlePointPowerMagic[i];
                 nameStudentSmallerPoints = i;
                 facultyStudentSmaller = i;
             }
         }
-        System.out.println("У " + bigBattleName[nameStudentMaxPoint] + " из " + faculty[facultyStudentBest] + " сумма баллов равна " + maxPoints + ". "
-                + bigBattleName[nameStudentMaxPoint] + " лучший Хогвардец, чем " + bigBattleName[nameStudentSmallerPoints] + " из " + faculty[facultyStudentSmaller]);
+        System.out.println("У " + bigBattleName[nameStudentMaxPoint] + " из " + faculty[facultyStudentBest] + " магическая сила равна: " + maxPoints + ". "
+                + bigBattleName[nameStudentMaxPoint] + " лучший Хогвардец, чем " + bigBattleName[nameStudentSmallerPoints] + " из " + faculty[facultyStudentSmaller]
+        + " у которого , ха-ха, магическая сила всего - то: " + smallerPoints);
     }
 }
